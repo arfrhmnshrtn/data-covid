@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #151515;
+}
+.container-cards{
+    gap: 20px;
+}
+.Indonesia{
+    display: none;
+}
+.header.sticky{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.input-kywoard-provinsi{
+    outline: none;
+    background-color: #313030;
+    border: 1px solid #313030;
+}
+.input-kywoard-provinsi:focus{
+    border: 1px solid #4e4d4d;
+}
+.footer{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media only screen and (max-width: 768px){
+    .home .text-home{
+        padding: 30px;
+        text-align: center;
+    }
+    .data{
+        flex-direction: column;
+    }
+    .mencuci-tangan{
+        display: grid;
+        grid-template-areas: 
+        'atas'
+        'bawah'
+        ;
+    }
+    .mencuci-tangan .title{
+        grid-area: bawah;
+    }
+    .mencuci-tangan .images{
+        grid-area: atas;
+    }
+    .text-title{
+        font-size: 1rem;
+    }
+}

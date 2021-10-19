@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Data Covid Indonesia</title>
+
+    <!-- my style -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-default navbar-dark header fixed-top">
+      <div class="container pt-1 pb-1">
+        <a class="navbar-brand" href="#"><img class="img-fluid" src="Asset/img/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item p-2 me-3">
+              <a class="nav-link active text-light text-center" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item p-2 me-3">
+              <a class="nav-link text-light text-center" href="#data-covid-indonesia">Data Covid Indonesia</a>
+            </li>
+            <li class="nav-item p-2 me-3">
+              <a class="nav-link text-light text-center" href="#data-covid-provinsi">Data Covid Provinsi</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link text-light text-center" href="#pencegahan">Pencegahan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- home section -->
+    <div class="jumbotron d-flex align-items-center home" style="height: 100vh;">
+      <div class="container mt-5">
+        <div class="row d-flex align-items-center">
+          <div class="col-md text-home">
+            <h4 class="text-warning">Corona Virus Pandemic</h4>
+            <h1 class="text-light fs-1" style="letter-spacing: .3em;">Stay Home,</h1>
+            <h1 class="text-light fs-1" style="letter-spacing: .3em;">Stay Safe</h1>
+          </div>
+          <div class="col-md">
+            <img src="Asset/img/ilustrasi covid 1.svg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end home -->
+
+
+    <!-- data covid indonesia -->
+    <div class="jumbotron mb-xl-5 p-5" id="data-covid-indonesia">
+      <div class="container-fluid">
+        <h3 class="text-center text-light mb-5 mt-5" style="letter-spacing: .1em;">Data Covid19 Indonesia</h3>
+        <div class="row p-4 data-covid-indonesia" style="background-color: #101010;">
+          <div class="col-md text-light text-center p-3">
+            <h4>Terkonfirmasi</h4>
+            <h1 class="text-danger total-kasus" style="letter-spacing: .1em;"></h1>
+          </div>
+          <div class="col-md text-light text-center p-3">
+            <h4>Sembuh</h4>
+            <h1 class="text-success kasus-sembuh" style="letter-spacing: .1em;"></h1>
+          </div>
+          <div class="col-md text-light text-center p-3">
+            <h4>Meninggal</h4>
+            <h1 class="text-warning kasus-meniggal" style="letter-spacing: .1em;"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end data covid indonesia -->
+
+
+    <!-- data covid provinsi -->
+    <div class="jumbotron p-5" id="data-covid-provinsi">
+      <div class="container-fluid">
+        <h3 class="text-center text-light mb-5 pt-5" style="letter-spacing: .1em;">Data Covid19 Provinsi</h3>
+        <div class="row">
+            <div class="col-12">
+              <div class="container">
+                <div class="input-group mb-3">
+                  <input type="text" class="w-100 p-2 ps-4 rounded text-light input-kywoard-provinsi" placeholder="Cari Provinsi" aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <div class="logo position-absolute text-light h-100 end-0 ps-3 pe-3 d-flex align-items-center justify-content-center">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> 
+          <!-- wadah cards -->
+          <div class="row mt-5 container-cards mb-xl-5">
+          </div>
+      </div>
+    </div>
+    <!-- end data covid provinsi -->
+
+
+    <!-- pencegahan section -->
+    <div class="jumbotron mt-5 mb-5" id="pencegahan">
+      <div class="container">
+        <h2 class="text-center text-light mb-5" style="letter-spacing: .1em;">Pencegahan Covid19</h2>
+        <div class="wrapper-pencegahan">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="img-fluid" src="Asset/img/pakai masker.svg" alt=""> <br>
+              <a class="text-secondary text-decoration-none opacity-25 text-center" href="http://www.freepik.com">Designed by Freepik</a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+              <h3 class="text-light text-uppercase fw-bold opacity-75 text-center p-3 text-title" style="letter-spacing: .2rem;">Memakai Masker</h3>
+            </div>
+          </div>
+          <div class="row mencuci-tangan mt-5">
+            <div class="col-md-6 d-flex justify-content-center align-items-center title">
+              <h3 class="text-light text-uppercase fw-bold opacity-75 text-center pt-3 text-title" style="letter-spacing: .2rem;">Mencuci Tangan <br> Dengan Sabun</h3>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end images">
+              <img class="img-fluid" src="Asset/img/Mencuci tangan.svg" alt="">
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <img class="img-fluid" src="Asset/img/social distencing.svg" alt="">
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+              <h3 class="text-light text-uppercase fw-bold opacity-75 text-center p-3 text-title" style="letter-spacing: .2rem;">Menjaga jarak / <br> Social Distancing</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end pencegahan -->
+
+    <!-- footer -->
+    <div class="container-fluid footer">
+      <footer class="d-flex flex-wrap justify-content-center align-items-center p-3 flex-column">
+        <h5 class="text-secondary">Copyright By Arief</h5>
+        <div class="icon d-flex">
+          <div class="p-2 fs-4" id="facebook"><a href="" class="text-secondary"><i class="fab fa-facebook"></i></a></div>
+          <div class="p-2 fs-4" id="facebook"><a href="" class="text-secondary"><i class="fab fa-instagram"></i></a></div>
+          <div class="p-2 fs-4" id="facebook"><a href="" class="text-secondary"><i class="fab fa-github"></i></a></div>
+        </div>
+      </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- my script -->
+    <script src="script.js"></script>
+  </body>
+</html>
