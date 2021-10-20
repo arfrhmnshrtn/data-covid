@@ -15,6 +15,12 @@
 
     <!-- my style -->
     <link rel="stylesheet" href="style.css">
+
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-default navbar-dark header fixed-top">
@@ -63,7 +69,7 @@
 
     <!-- data covid indonesia -->
     <div class="jumbotron mb-xl-5 p-5" id="data-covid-indonesia">
-      <div class="container-fluid">
+      <!-- <div class="container-fluid"> -->
         <h3 class="text-center text-light mb-5 mt-5" style="letter-spacing: .1em;">Data Covid19 Indonesia</h3>
         <div class="row p-4 data-covid-indonesia" style="background-color: #101010;">
           <div class="col-md text-light text-center p-3">
@@ -79,31 +85,29 @@
             <h1 class="text-warning kasus-meniggal" style="letter-spacing: .1em;"></h1>
           </div>
         </div>
-      </div>
+      <!-- </div> -->
     </div>
     <!-- end data covid indonesia -->
 
 
     <!-- data covid provinsi -->
     <div class="jumbotron p-5" id="data-covid-provinsi">
-      <div class="container-fluid">
+      <!-- <div class="container-fluid"> -->
         <h3 class="text-center text-light mb-5 pt-5" style="letter-spacing: .1em;">Data Covid19 Provinsi</h3>
         <div class="row">
-            <div class="col-12">
-              <div class="container-fluid">
-                <div class="input-group mb-3">
+            <div class="col">
+                <div class="input-group">
                   <input type="text" class="w-100 p-2 ps-4 rounded text-light input-kywoard-provinsi" placeholder="Cari Provinsi" aria-label="Recipient's username" aria-describedby="button-addon2">
                   <div class="logo position-absolute text-light h-100 end-0 ps-3 pe-3 d-flex align-items-center justify-content-center">
                     <i class="fas fa-search"></i>
                   </div>
                 </div>
-              </div>
             </div>
         </div> 
           <!-- wadah cards -->
-          <div class="row mt-5 container-cards mb-xl-5">
-          </div>
-      </div>
+        <div class="row mt-5 container-cards mb-xl-5">
+        </div>
+      <!-- </div> -->
     </div>
     <!-- end data covid provinsi -->
 
@@ -112,11 +116,13 @@
     <div class="jumbotron mt-5 mb-5" id="pencegahan">
       <div class="container">
         <h2 class="text-center text-light mb-5" style="letter-spacing: .1em;">Pencegahan Covid19</h2>
-        <div class="wrapper-pencegahan">
+        <div class="container wrapper-pencegahan">
           <div class="row">
-            <div class="col-md-6">
-              <img class="img-fluid" src="Asset/img/pakai masker.svg" alt=""> <br>
-              <a class="text-secondary text-decoration-none opacity-25 text-center" href="http://www.freepik.com">Designed by Freepik</a>
+            <div class="col-md-6 d-flex justify-content-start" >
+              <div class="licensi text-center">
+                <img class="img-fluid" src="Asset/img/pakai masker.svg" alt=""> <br>
+                <a class="text-secondary text-decoration-none opacity-25 text-center fs-6" href="http://www.freepik.com">Designed by Freepik</a>
+              </div>
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
               <h3 class="text-light text-uppercase fw-bold opacity-75 text-center p-3 text-title" style="letter-spacing: .2rem;">Memakai Masker</h3>
@@ -127,12 +133,18 @@
               <h3 class="text-light text-uppercase fw-bold opacity-75 text-center pt-3 text-title" style="letter-spacing: .2rem;">Mencuci Tangan <br> Dengan Sabun</h3>
             </div>
             <div class="col-md-6 d-flex justify-content-end images">
-              <img class="img-fluid" src="Asset/img/Mencuci tangan.svg" alt="">
+              <div class="licensi text-center">
+                <img class="img-fluid" src="Asset/img/Mencuci tangan.svg" alt=""> <br>
+                <a class="text-secondary text-decoration-none opacity-25 text-center fs-6" href="http://www.freepik.com">Designed by Freepik</a>
+              </div>
             </div>
           </div>
           <div class="row mt-5">
             <div class="col-md-6">
-              <img class="img-fluid" src="Asset/img/social distencing.svg" alt="">
+              <div class="licensi text-center">
+                <img class="img-fluid" src="Asset/img/social distencing.svg" alt=""> <br>
+                <a class="text-secondary text-decoration-none opacity-25 text-center fs-6" href="http://www.freepik.com">Designed by Freepik</a>
+              </div>
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
               <h3 class="text-light text-uppercase fw-bold opacity-75 text-center p-3 text-title" style="letter-spacing: .2rem;">Menjaga jarak / <br> Social Distancing</h3>
@@ -183,5 +195,12 @@
 
     <!-- my script -->
     <script src="script.js"></script>
+
+    <!-- script aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
   </body>
 </html>
