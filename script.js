@@ -30,7 +30,7 @@ const updateUI = (characters) => {
   const formatNumber  = new Intl.NumberFormat();
   let cards = '';
   characters.forEach((el) => {
-           cards += `<div class="col-md text-light p-3 cards-provinsi ${el.attributes.Provinsi}" style="background-color: #101010;">
+           cards += `<div class="col-md text-light m-2 p-3 cards-provinsi ${el.attributes.Provinsi}" style="background-color: #101010;">
                       <h4 class="text-center text-uppercase fw-bold">${el.attributes.Provinsi}</h4>
                       <div class="data d-flex justify-content-center">
                         <div class="total text-center p-3">
