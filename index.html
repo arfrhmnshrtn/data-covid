@@ -11,7 +11,7 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Data Covid Indonesia</title>
+    <title>Covid19 Indonesia</title>
 
     <!-- my style -->
     <link rel="stylesheet" href="style.css">
@@ -20,9 +20,17 @@
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- icon -->
+    <link rel="icon" href="Asset/icon.png">
+
 
   </head>
   <body>
+
+    <div class="btn-to-top text-white position-fixed opacity-50">
+      <i class="fas fa-chevron-up bg-danger fw-bold p-3"></i>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-default navbar-dark header fixed-top">
       <div class="container pt-1 pb-1">
         <a class="navbar-brand" href="#"><img class="img-fluid" src="Asset/img/logo.png" alt=""></a>
@@ -31,17 +39,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item p-2 me-3">
-              <a class="nav-link active text-light text-center" aria-current="page" href="#">Home</a>
+            <li class="nav-item p-2 me-3 link">
+              <a class="nav-link text-white text-center" href="#">Home</a>
             </li>
             <li class="nav-item p-2 me-3">
-              <a class="nav-link text-light text-center" href="#data-covid-indonesia">Data Covid Indonesia</a>
+              <a class="nav-link text-white text-center" href="#data-covid-indonesia">Data Covid Indonesia</a>
             </li>
             <li class="nav-item p-2 me-3">
-              <a class="nav-link text-light text-center" href="#data-covid-provinsi">Data Covid Provinsi</a>
+              <a class="nav-link text-white text-center" href="#data-covid-provinsi">Data Covid Provinsi</a>
             </li>
             <li class="nav-item p-2">
-              <a class="nav-link text-light text-center" href="#pencegahan">Pencegahan</a>
+              <a class="nav-link text-white text-center btn-pencegahan" href="#pencegahan">Pencegahan</a>
             </li>
           </ul>
         </div>
@@ -111,11 +119,10 @@
     </div>
     <!-- end data covid provinsi -->
 
-
     <!-- pencegahan section -->
     <div class="jumbotron mt-5 mb-5" id="pencegahan">
       <div class="container">
-        <h2 class="text-center text-light mb-5" style="letter-spacing: .1em;">Pencegahan Covid19</h2>
+        <h2 class="text-center text-light mb-5 title-pencegahan" style="letter-spacing: .1em;">Pencegahan Covid19</h2>
         <div class="container wrapper-pencegahan">
           <div class="row">
             <div class="col-md-6 d-flex justify-content-start" >
@@ -158,7 +165,7 @@
     <!-- footer -->
     <div class="container-fluid footer">
       <footer class="d-flex flex-wrap justify-content-center align-items-center p-3 flex-column">
-        <h5 class="text-secondary">Copyright By Arief</h5>
+        <h5 class="text-secondary" style="letter-spacing: .5em;">Copyright By Arief</h5>
         <div class="icon d-flex">
           <div class="p-2 fs-4" id="facebook"><a href="" class="text-secondary"><i class="fab fa-facebook"></i></a></div>
           <div class="p-2 fs-4" id="facebook"><a href="" class="text-secondary"><i class="fab fa-instagram"></i></a></div>

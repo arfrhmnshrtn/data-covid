@@ -1,5 +1,6 @@
 const searchBar = document.querySelector('.input-kywoard-provinsi');
 const provinsiList = document.querySelector('.container-cards');
+const containerError = document.querySelector('.container-error');
 let hpProvinsi = [];
 
 searchBar.addEventListener('keyup', (e) => {
@@ -10,13 +11,19 @@ searchBar.addEventListener('keyup', (e) => {
           provinsi.attributes.Provinsi.toLowerCase().includes(searchString)
       );
   });
+  
   updateUI(filterProvinsi);
 });
 
 const loadData = async () => {
     try {
         const res = await fetch('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok){
+            throw new Error(response.responseText);
+          }
+          return response.json();
+        })
         .then(response => response.features);
         hpProvinsi = await res;
         updateUI(hpProvinsi);
@@ -47,43 +54,65 @@ const updateUI = (characters) => {
                         </div>
                       </div>
                     </div>`;
-  })
-  provinsiList.innerHTML = cards;
+  });
+  if ( characters.length === 0 ){
+    const a = `<p class="text-danger text-center">Provinsi Not Found!!!</p>`;
+    provinsiList.innerHTML = a;
+  }else{
+    provinsiList.innerHTML = cards;
+  }
 };
 
 loadData();
 
 
-  // function update data indonesia
-  function tampilkanDataIndonesia(response) {
-    let totalSeluruhIndo = 0;
-    let totalSembuhIndo = 0;
-    let totalMeninggalIndo = 0;
-    // console.log(response)
-    response.forEach(c => {
-      totalSembuhIndo += c.attributes.Kasus_Semb;
-      totalMeninggalIndo += c.attributes.Kasus_Meni;
-      totalSeluruhIndo += c.attributes.Kasus_Posi;
-    });
+// function update data indonesia
+function tampilkanDataIndonesia(response) {
+  let totalSeluruhIndo = 0;
+  let totalSembuhIndo = 0;
+  let totalMeninggalIndo = 0;
+  // console.log(response)
+  response.forEach(c => {
+    totalSembuhIndo += c.attributes.Kasus_Semb;
+    totalMeninggalIndo += c.attributes.Kasus_Meni;
+    totalSeluruhIndo += c.attributes.Kasus_Posi;
+  });
 
-    const formatNumber  = new Intl.NumberFormat(); //format number
-    const totalKasus = document.querySelector('.total-kasus');
-    const kasusSembuh = document.querySelector('.kasus-sembuh');
-    const kasusMeninggal = document.querySelector('.kasus-meniggal');
+  const formatNumber  = new Intl.NumberFormat(); //format number
+  const totalKasus = document.querySelector('.total-kasus');
+  const kasusSembuh = document.querySelector('.kasus-sembuh');
+  const kasusMeninggal = document.querySelector('.kasus-meniggal');
     
-    totalKasus.innerHTML = formatNumber.format(totalSeluruhIndo);
-    kasusSembuh.innerHTML = formatNumber.format(totalSembuhIndo);
-    kasusMeninggal.innerHTML = formatNumber.format(totalMeninggalIndo);
-  }
+  totalKasus.innerHTML = formatNumber.format(totalSeluruhIndo);
+  kasusSembuh.innerHTML = formatNumber.format(totalSembuhIndo);
+  kasusMeninggal.innerHTML = formatNumber.format(totalMeninggalIndo);
+}
 
 
   // navbar sticky
-  const header = document.querySelector('.header');
-  window.addEventListener("scroll", function() {
-    if(this.scrollY > 50){
-        header.classList.add("sticky");
-    }else{
-        header.classList.remove("sticky");
-    }
-  });
+const header = document.querySelector('.header');
+window.addEventListener("scroll", function() {
+  if(this.scrollY > 50){
+      header.classList.add("sticky");
+  }else{
+      header.classList.remove("sticky");
+  }
+});
     
+
+
+const btnToTop = document.querySelector('.btn-to-top');
+btnToTop.addEventListener('click', function() {
+  document.documentElement.scrollTop = 0;
+});
+
+
+
+window.onscroll = function() {navSticky()};
+function navSticky() {
+  if (window.pageYOffset > 400) {
+    btnToTop.style.display = "block";
+  } else {
+    btnToTop.style.display = "none";
+  }
+}

@@ -30,12 +30,19 @@ body{
 .footer{
     background-color: rgba(0, 0, 0, 0.5);
 }
-/* .licensi{
-    text-align: center;
-    width: 100%;
-    background-color: red;
-} */
-
+.btn-to-top{
+    right: 30px;
+    bottom: 20px;
+    z-index: 99;
+    cursor: pointer;
+    display: none;
+}
+.nav-link:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.title-pencegahan{
+    padding-top: 100px;
+}
 
 @media only screen and (max-width: 768px){
     .home .text-home{
